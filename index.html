@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Estamos listos para darte un buen servicio y recibir todos tus paquetes. Unete al gran equipo de 504 speed services, esperamos por ti.">
+    <meta name="og:image" content="SPEED-SERVICES.png">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="splide.min.css">
+    <link rel="stylesheet" href="main.css">
+    <title>504 SPEED SERVICES</title>
+</head>
+<body>
+
+    <!-- ScrollBar -->
+    <div id="progressbar"></div>
+    <div id="scrollpath"></div>
+    <!-- ScrollBar -->
+
+    <!-- BUTTON UP! -->
+    <button id="btnScrollToTop">
+        <span class="iconify" data-icon="ic:baseline-keyboard-double-arrow-up"></span>
+    </button>
+    <!-- BUTTON UP! -->
+
+    <!-- CALCULADORA -->
+    <div class="bg-calculadora">
+        <div class="container-calculadora">
+            <i class="fas fa-times" id="btn-close"></i>
+            <div class="calculadora-items">
+            <div class="dashboard">
+                <div class="values">
+                    <div class="form__group field">
+                        <input type="number" class="form__field medidas" value="0" placeholder="Alto" name="alto" id='Alto'/>
+                        <label for="alto" class="form__label">Alto</label>
+                    </div>
+                    <div class="form__group field">
+                        <input type="number" class="form__field medidas" value="0" placeholder="Largo" name="largo" id='Largo'/>
+                        <label for="largo" class="form__label">Largo</label>
+                    </div>
+                    <div class="form__group field">
+                        <input type="number" class="form__field medidas" value="0" placeholder="Ancho" name="ancho" id='Ancho'/>
+                        <label for="ancho" class="form__label">Ancho</label>
+                    </div>
+                    <div class="form__group field">
+                        <input type="number" class="form__field medidas" value="0" placeholder="Peso" name="peso" id='Peso'/>
+                        <label for="peso" class="form__label">Peso</label>
+                    </div>
+                </div>
+                <div class="info">
+                    <div class="box"><h4>Marítimo: $16,00 <span>cada pie cúbico (Mínimo de $30,00)</span></h4></div>
+                    <div class="box"><h4>Aéreo: $4 <span>cada libra (Mínimo de $30,00)</span></h4></div>
+                </div>
+                <div class="resultados">
+                    <div id="resultado-1">
+                        <p>Envio Maritimo caja de <span id="MaritimoUno"></span>X<span id="MaritimoDos"></span>X<span id="MaritimoTres"></span></p>
+                        <h2><span id="precioMaritimo">0</span></h2>
+                    </div>
+                    <div id="resultado-2">
+                        <p>Envio Aereo caja de <span id="AereoUno"></span>X<span id="AereoDos"></span>X<span id="AereoTres"></span> y peso de <span id="AereoPeso"></span></p>
+                        <h2><span id="precioAereo">0</span></h2>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- CALCULADORA -->
+
+    <div class="container-nav">
+        <div class="nav">
+            <div class="logo"><img src="SPEED-SERVICES.png" class="nav-logo"></div>
+            <div class="entradas">
+                <a href="#hero">Inicio</a>
+                <a href="#about">Sobre Nosotros</a>
+                <a href="#service">Servicios</a>
+                <a href="#destinations">Destinos</a>
+                <a href="#contact">Contactanos</a>
+                <button id="calculadora">
+                    <span class="iconify" data-icon="fa-solid:truck-loading" data-width="30" data-height="30"></span>
+                    <span class="poptext" id="myPopup">Calcula el precio de tus envios</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="hero" id="hero">
+        <div class="content">
+            <div id="big-hero" class="splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <div class="bh-magic animate">
+                            <img class="back-image" src="bh-back-01.jpg" alt="">  
+                            <div class="blur-bar"></div>
+                            <h2 class="text-title"><span class="textAnimate">Entregamos todos tus envíos</span></h2>
+                            <h2 class="text-title"><span class="textAnimate">en tus manos</span></h2>
+                            <div class="text-info slide">
+                                <p><span class="pAnimate">Envíos a Honduras, Colombia y Venezuela</span></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="bh-magic">
+                            <img class="back-image" src="bh-back-02.jpg" alt="">  
+                            <div class="blur-bar red"></div>
+                            <h2><span class="textAnimate">Entregamos todos tus envíos</span></h2>
+                            <h2><span class="textAnimate">en tus manos</span></h2>
+                            <div class="text-info">
+                                <p><span class="pAnimate">Envíos a Honduras, Colombia y Venezuela</span></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="splide__slide">
+                        <div class="bh-magic">
+                            <img class="back-image" src="bh-back-03.jpg" alt="">  
+                            <div class="blur-bar green"></div>
+                            <h2><span class="textAnimate">Entregamos todos tus envíos</span></h2>
+                            <h2><span class="textAnimate">en tus manos</span></h2>
+                            <div class="text-info">
+                                <p><span class="pAnimate">Envíos a Honduras, Colombia y Venezuela</span></p>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="about" id="about">
+        <div class="info">
+            <div class="bg-sphere">
+                <span style="--i:0;"></span>
+                <span style="--i:1;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:3;"></span>
+            </div>
+            <div class="text">
+                <p class="subtitle">misión</p>
+                <h2 class="hidden-text">Sobre Nuestra</h2>
+                <p class="history">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus praesentium reiciendis quas sunt ad nam a corporis atque quaerat distinctio, officiis maiores voluptatum ipsum vitae doloribus quisquam tempora? Blanditiis, incidunt.
+                <br><br>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus praesentium reiciendis quas sunt ad nam a corporis atque quaerat distinctio, officiis maiores voluptatum ipsum vitae doloribus quisquam tempora? Blanditiis, incidunt.
+                </p>
+                <div class="choose">
+                    <p><span class="iconify" data-icon="ic:baseline-done" style="color: #25a244;"></span>Error minus sint nobis dolor</p>
+                    <p><span class="iconify" data-icon="ic:baseline-done" style="color: #25a244;"></span>Voluptatum porro expedita labore esse</p>
+                    <p><span class="iconify" data-icon="ic:baseline-done" style="color: #25a244;"></span>Voluptas unde sit pariatur earum</p>
+                </div>
+            </div>
+            <div class="about-img">
+                <p class="img-text">"Un viaje de mil millas empieza con un primer paso"</p>
+                <h4>-Benjamin Frankiln</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="service" id="service">
+        <div class="text">
+            <h1>Servicios</h1>
+        </div>
+        <div class="list-services">
+            <ul>
+                <li class="box-services">
+                    <img src="avion.png">
+                    <h3>Air Freight</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+                </li>
+                <li class="box-services">
+                    <img src="boat.png">
+                    <h3>Ocean Freight</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+                </li>
+                <li class="box-services">
+                    <img src="truck.png">
+                    <h3>Land Transportation</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+                </li>
+                <li class="box-services">
+                    <img src="almacen.png">
+                    <h3>Warehousing</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+                </li>
+                <li class="box-services">
+                    <img src="cajas.png">
+                    <h3>Storage</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+                </li>
+                <li class="box-services">
+                    <img src="world.png">
+                    <h3>Worldwide Delivery</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis quis molestiae vitae eligendi at.</p>
+                </li>
+            </ul>
+        </div>
+        <div class="bg-services">
+        </div>
+    </div>
+
+    <div class="info-services">
+        <h1>Como funciona nuestro servicios de envios</h1>
+        <div class="indications">
+            <div class="one">
+                <span>1</span>
+                <p>Cuando hagas una compra por Internet en cualquier tienda online, asegúrate de colocar los siguientes datos como datos de envío (Shipping Address).
+                </p>
+            </div>
+            <div class="second">
+                <span>2</span>
+                <p>Cuando tus compras lleguen a nuestros almacenes de Miami en la dirección anterior, te enviaremos un correo electrónico notificando que los recibimos. En ese correo deberás indicar si deseas que procedamos a enviarte la mercancía o si prefieres almacenarla unos días mientras te llega más.
+                </p>
+            </div>
+            <div class="three">
+                <span>3</span>
+                <p>Cuando toda tu mercancía esté en nuestros almacenes, podrás dar tus instrucciones de embarque, indicando si deseas envío aéreo o marítimo. En un plazo de 24 – 48 horas, empaquetamos y preparamos tu carga y te enviaremos tu factura de almacen por el valor de envío.
+                <br><br>
+                Si deseas re empaque para optimizar el volumen de tus paquetes puedes solicitarlo hasta 4 días antes del envío. El servicio de re empaque tiene un costo adicional dependiendo de las características del re empaque y de los materiales utilizados
+                </p>
+            </div>
+            <div class="four">
+                <span>4</span>
+                <p>Tu mercancía sale en el siguiente aéreo o marítimo planificado. Una vez llegue la carga a su destino, se te notificará vía correo electrónico para que puedas retirarla.
+                <br><br>
+                Debes informar cualquier cambio en los datos aportados en el registro, con el objeto de evitar retardos en la entrega.
+                <br><br>
+                Transcurridos Treinta (30) días continuos sin que sea retirada la carga, la misma será declarada en estado de abandono, por lo que se autoriza a la empresa disponer de ella.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="destinations" id="destinations">
+        <h1>Destinos</h1>        
+        <div class="locations">
+            <span>
+                <img src="Venezuela.svg" alt="">
+                <h5>Venezuela</h5>
+            </span>
+            <span>
+                <img src="Honduras.svg" alt="">
+                <h5>Honduras</h5>
+            </span>
+            <span>
+                <img src="El Salvador.svg" alt="">
+                <h5>El Salvador</h5>
+            </span>
+            <span>
+                <img src="Mexico.jpg" alt="">
+                <h5>Mexico</h5>
+            </span>
+            <span>
+                <img src="Costa Rica.png" alt="">
+                <h5>Costa Rica</h5>
+            </span>
+            <span>
+                <img src="Guatemala.png" alt="">
+                <h5>Guatemala</h5>
+            </span>
+            <!-- <ul>
+                <li><p>Lorem ipsum</p></li>
+                <li><p>Lorem ipsum</p></li>
+                <li><p>Lorem ipsum</p></li>
+                <li><p>Lorem ipsum</p></li>
+                <li><p>Lorem ipsum</p></li>
+                <li><p>Lorem ipsum</p></li>
+                <li><p>Lorem ipsum</p></li>
+                <li><p>Lorem ipsum</p></li>
+                <li><p>Lorem ipsum</p></li>
+                <li><p>Lorem ipsum</p></li>
+            </ul> -->
+        </div>
+    </div>
+
+    <div class="contact" id="contact">
+        <div class="contact-form">
+            <div class="form">
+                <h1>Escribenos</h1>
+                <div class="php">
+                    <form action="" id="enviar-email">
+                        <input type="text" id="fname" name="firstname" placeholder="Nombre">
+    
+                        <input type="email" id="email" name="mail" placeholder="Email">
+    
+                        <textarea id="subject" name="subject" placeholder="Mensaje" style="height:200px"></textarea>
+    
+                        <input type="submit" value="Enviar" id="submit" class="disabled">
+                    </form>
+                </div>
+            </div>
+            <div class="dates">
+                <h2>Información del contacto</h2>
+                <p>Estamos abiertos a cualquier sugerencia o simplemente para charlar</p>
+                <div class="info-company">
+                    <div class="circle-1">
+                        <span class="iconify" data-icon="fluent:location-28-filled"></span>
+                    </div>
+                    <p>203 Fake St. Mountain View,<br> San Francisco, California, USA</p>
+                    <div class="circle-2">
+                        <span class="iconify" data-icon="bx:bxs-phone-call"></span>
+                    </div>
+                    <p>+1 232 3235 324</p>
+                    <div class="circle-3">
+                        <span class="iconify" data-icon="entypo:email"></span>
+                    </div>
+                    <p>youremail@domain.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="faq">
+        <div class="container-faq">
+            <h1>Frequently Asked Questions</h1>
+            <div class="bar"></div>
+            <div class="wrapper">
+                <button class="toggle">
+                    What is the return policy?
+                    <i class="fas fa-plus icon"></i>
+                </button>
+                <div class="content-faq">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, laudantium. Atque in quaerat reprehenderit laudantium recusandae est velit pariatur cumque eos aliquid iusto soluta vitae, obcaecati unde aliquam! Consequatur, harum.</p>
+                </div>
+            </div>
+            <div class="wrapper">
+                <button class="toggle">
+                    How do I become a member?
+                    <i class="fas fa-plus icon"></i>
+                </button>
+                <div class="content-faq">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, repudiandae vero! Suscipit, debitis labore unde quo facere repellendus vero enim rerum cupiditate mollitia ab, ipsum eius aliquam laborum, possimus doloremque.</p>
+                </div>
+            </div>
+            <div class="wrapper">
+                <button class="toggle">
+                    How do I apply the coupon?
+                    <i class="fas fa-plus icon"></i>
+                </button>
+                <div class="content-faq">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique molestiae asperiores fuga eligendi aperiam minus, animi impedit praesentium aliquid quaerat aspernatur facilis ipsum, nulla debitis ab quis recusandae doloremque eum.</p>
+                </div>
+            </div>
+        </div>
+        <div id="lottie"></div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="container-logo">
+                <img src="SPEED-SERVICES.png" alt="" class="footer-logo">
+            </div>
+
+            <div class="links">
+                <div class="bar"></div>
+                <ul>
+                    <a href="#hero">Inicio</a>
+                    <a href="#about">Sobre Nosotros</a>
+                    <a href="#services">Servicios</a>
+                    <a href="#destinations">Destinos</a>
+                    <a href="#contact">Contactanos</a>
+                </ul>
+            </div>
+
+            <div class="socials">
+                <div class="bar"></div>
+                <div class="icons">
+                    <a href="https://www.instagram.com/504_speed_services/" target="_blank"><span class="iconify" style="color: #fff;" data-icon="akar-icons:instagram-fill" data-width="25" data-height="25"></span></a>
+                    <a href="" target="_blank"><span class="iconify" style="color: #fff;" data-icon="akar-icons:whatsapp-fill" data-width="25" data-height="25"></span></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="jquery-3.6.0.min.js"></script>
+<script src="notiflix-aio-2.7.0.min.js"></script>
+<script src="iconify.min.js"></script>
+<script src="gsap.min.js"></script>
+<script src="splide.min.js"></script>
+<script src="splide.js"></script>
+<script src="main.js"></script>
+<script src="animation.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.7.13/lottie.min.js"></script>
+
+<script>
+var animation = bodymovin.loadAnimation({
+    container: document.getElementById('lottie'),
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: 'lottie.json'
+})
+</script>
+
+<script>
+    let containerNav = document.querySelector('.container-nav')
+    let navBar = document.querySelector('.nav')
+    let templates = document.querySelectorAll('.entradas a')
+
+    window.addEventListener('scroll', () =>{
+        let scrolling = navBar.getBoundingClientRect()
+    
+        if (scrolling.top < -175) {
+            navBar.classList.add('fixed')
+            setTimeout(() => {navBar.classList.add('slide')}, 300);
+            containerNav.classList.add('fixed')
+            templates.forEach( e => {
+                e.classList.add('fixed')
+            });
+            myPopup.style.bottom = '-41%'
+            myPopup.style.left = '82%'
+        }
+
+        if (scrollY < 204 && navBar.classList.contains('fixed')) {
+            navBar.classList.remove('fixed')
+            containerNav.classList.remove('fixed')
+            navBar.classList.remove('slide')
+            templates.forEach( e => {
+                e.classList.remove('fixed')
+            });
+            myPopup.style.bottom = '-40%'
+            myPopup.style.left = '81%'
+        }
+
+        if (scrollY > 5535) {
+            navBar.classList.remove('fixed')
+            containerNav.classList.remove('fixed')
+        }
+    })
+</script>
+
+<!-- SLIDE LETTERS -->
+<script>
+    const hiddenText = document.querySelector('.hidden-text')
+
+    window.addEventListener('scroll', () =>{
+        let scroll = hiddenText.getBoundingClientRect()
+
+        if (scroll.top < 330.5) {
+            hiddenText.style.transform = 'translateX(0)'
+            hiddenText.style.opacity = '1'
+        } else{
+            hiddenText.style.transform = 'translateX(-400px)'
+            hiddenText.style.opacity = '0'
+        }
+    })
+
+</script>
+<!-- SLIDE LETTERS -->
+
+<!-- SCROLL -->
+<script>
+    let progress = document.getElementById('progressbar');
+    let totalHeight = document.body.scrollHeight - window.innerHeight;
+    window.onscroll = function(){
+        let progressHeight = (window.pageYOffset / totalHeight) * 100;
+        progress.style.height = progressHeight + "%";
+    }
+</script>
+<!-- SCROLL -->
+
+<!-- BUTTON SCROLL -->
+<script>
+    const btnUp = document.querySelector('#btnScrollToTop');
+
+    btnUp.addEventListener('click', function () {
+
+        $('html, body').animate({ scrollTop: 0}, 'slow');
+    })
+</script>
+<!-- BUTTON SCROLL -->
+
+<script>
+    const calculadora = document.querySelector('#calculadora')
+    let slide = document.querySelector('.container-calculadora')
+    let bgSlide = document.querySelector('.bg-calculadora')
+    let btnClose = document.querySelector('#btn-close')
+    const myPopup = document.getElementById('myPopup');
+
+    calculadora.addEventListener('click', () =>{
+        if (myPopup.classList.contains('show')) {
+            myPopup.classList.remove('show')
+        }
+
+        slide.classList.add('active')
+
+        if (slide.classList.contains('active')) {
+            calculadora.style.backgroundColor = '#2b6788'
+            calculadora.style.transform = 'scale(0.9)'
+        }
+
+        bgSlide.classList.add('active')
+    })
+
+    btnClose.addEventListener('click', () =>{
+        slide.classList.remove('active')
+        bgSlide.classList.remove('active')
+        calculadora.style.backgroundColor = '#2b678835'
+        calculadora.style.transform = 'scale(1)'
+    })
+
+    document.addEventListener('DOMContentLoaded', () =>{
+        myPopup.classList.add('show')
+
+      var popup = setInterval(() => {
+            if(myPopup.classList.contains('show')){
+                myPopup.classList.remove('show')
+            } else {
+                setTimeout(() => {
+                    myPopup.classList.add('show')
+                }, 8000);
+            }
+        }, 30000);
+
+
+        calculadora.addEventListener('click', () =>{
+            DetenerPopup()
+        })
+
+        function DetenerPopup() {
+            clearInterval(popup)
+        }
+    })
+</script>
+
+<script>
+function Maritimo(){
+    let datos = {
+        uno: document.getElementById('MaritimoUno'),
+        dos: document.getElementById('MaritimoDos'),
+        tres: document.getElementById('MaritimoTres'),
+        peso: document.getElementById('MaritimoPeso'),
+        precio: document.getElementById('precioMaritimo')
+    }
+
+    // Operacion para calcular el envio maritimo
+    let FormulaMaritimo = document.getElementById('Alto').value * document.getElementById('Largo').value * document.getElementById('Ancho').value / 1728;
+
+    let precioMaritimo = FormulaMaritimo * 17;
+
+    let resultadoMaritimo = Math.round(precioMaritimo)
+
+    if(FormulaMaritimo > 2){
+        document.getElementById('precioMaritimo').innerText = `$${resultadoMaritimo}`;
+    } else {
+        document.getElementById('precioMaritimo').innerText = 'Aplica minimo de $30,00'
+    }
+    // Operacion para calcular el envio maritimo
+
+    datos.uno.innerHTML = document.getElementById('Alto').value
+    datos.dos.innerHTML = document.getElementById('Largo').value
+    datos.tres.innerHTML = document.getElementById('Ancho').value
+}
+
+function Aereo(){
+    let datos = {
+        uno: document.getElementById('AereoUno'),
+        dos: document.getElementById('AereoDos'),
+        tres: document.getElementById('AereoTres'),
+        peso: document.getElementById('AereoPeso') 
+    }
+
+    // Operacion para calcular el envio Aereo
+    let formulaAereo = document.getElementById('Alto').value * document.getElementById('Largo').value * document.getElementById('Ancho').value / 166;
+
+    let precioAereo = formulaAereo * 4;
+
+    let valorPeso = document.getElementById('Peso').value;
+
+    let pesoVolumetrico = valorPeso * 4;
+
+    let resultadoAereo = Math.round(precioAereo);
+
+    if(valorPeso < formulaAereo && formulaAereo > 7){
+        document.getElementById('precioAereo').innerText = `$${resultadoAereo}`
+    } else if(valorPeso > formulaAereo && valorPeso > 7){
+        document.getElementById('precioAereo').innerText = `$${pesoVolumetrico}`
+    } else{
+        document.getElementById('precioAereo').innerText = 'Aplica minimo de $30,00'
+    }
+    // Operacion para calcular el envio Aereo
+
+    datos.uno.innerHTML = document.getElementById('Alto').value
+    datos.dos.innerHTML = document.getElementById('Largo').value
+    datos.tres.innerHTML = document.getElementById('Ancho').value
+    datos.peso.innerHTML = document.getElementById('Peso').value
+}
+
+let medidas = document.querySelectorAll('.medidas')
+
+medidas.forEach( (e) => {
+    e.addEventListener('input', () => {
+        Maritimo()
+        Aereo()
+    })
+});
+</script>
+
+<script>
+    let wrapper = document.getElementsByClassName('wrapper')
+    let toggles = document.getElementsByClassName('toggle')
+    let contentDiv = document.getElementsByClassName('content-faq')
+    let icons = document.getElementsByClassName('icon')
+    
+    for (let i=0; i < toggles.length; i++) {
+        toggles[i].addEventListener('click', ()=>{
+            if (parseInt(contentDiv[i].style.height) != contentDiv[i].scrollHeight){
+                contentDiv[i].style.height = contentDiv[i].scrollHeight + "px"
+                icons[i].classList.remove('fa-plus')
+                icons[i].classList.add('fa-minus')
+                wrapper[i].style.backgroundColor = "#0767f8";
+                toggles[i].style.color = "#fff"
+                contentDiv[i].style.color = "#fff"
+            } else {
+                contentDiv[i].style.height = "0px"
+                icons[i].classList.remove('fa-minus')
+                icons[i].classList.add('fa-plus')
+                wrapper[i].style.backgroundColor = "#fff";
+                toggles[i].style.color = "#0767f8"
+                contentDiv[i].style.color = "#0767f8"
+            }
+
+            for (let j = 0; j < contentDiv.length; j++) {
+                if (j!==i) {
+                    contentDiv[j].style.height = "0px";
+                    icons[j].classList.remove('fa-minus')
+                    icons[j].classList.add('fa-plus')
+                    wrapper[j].style.backgroundColor = "#fff";
+                    toggles[j].style.color = "#0767f8"
+                    contentDiv[j].style.color = "#0767f8"
+                }
+            }
+        });
+    }
+</script>
+</body>
+</html>
